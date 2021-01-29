@@ -1,0 +1,19 @@
+<ul>
+    <li *ngFor="let elemento of elementos">
+
+        {{elemento}}
+
+    </li>
+</ul>
+
+<button (click)="borrarElemento()">borrar</button>
+
+
+
+<div *ngIf="elementoBorrado; else noBorrado">
+    <h3>Elemento borrado: <small>{{elementoBorrado}}</small> </h3>
+
+</div>
+<ng-template #noBorrado>
+    <h3>No se a borrado nada</h3>
+</ng-template>
